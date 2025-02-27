@@ -16,6 +16,9 @@ const buttonEl = document.querySelector(".generator")
 
 buttonEl.addEventListener("click", () => {
     emailEl.innerHTML = ""
+    myfunction()
+})
+const myfunction = () => {
     for (let i = 0; i < 10; i++) {
         fetch("https://flynn.boolean.careers/exercises/api/random/mail")
 
@@ -25,4 +28,4 @@ buttonEl.addEventListener("click", () => {
                 emailEl.innerHTML += `<li class="list-group-item">${email}</li>`
             })
     }
-})
+}
